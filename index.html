@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Undangan Khitan Varend</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background:#f3f5f9;
+font-family:'Poppins',sans-serif;
+}
+
+/* COVER */
+
+.cover{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0b2238,#1c3f63);
+color:white;
+text-align:center;
+}
+
+.cover-card{
+border:2px solid #d4af37;
+border-radius:40px;
+padding:60px 50px;
+max-width:420px;
+background:rgba(0,0,0,0.2);
+}
+
+.save{
+font-family:'Playfair Display',serif;
+font-size:32px;
+color:#d4af37;
+}
+
+.title{
+background:white;
+color:#333;
+display:inline-block;
+padding:6px 20px;
+border-radius:20px;
+margin:15px 0;
+font-weight:bold;
+}
+
+.nama{
+font-family:'Playfair Display',serif;
+font-size:42px;
+margin-top:10px;
+}
+
+.btn-open{
+margin-top:25px;
+padding:12px 28px;
+border:none;
+background:#d4af37;
+color:black;
+border-radius:30px;
+}
+
+/* CONTENT */
+
+.content{
+display:none;
+animation:fade 1.5s;
+background:url('pattern.png');
+background-size:contain;
+}
+
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}
+
+/* CARD */
+
+.section-card{
+background:white;
+border-radius:18px;
+padding:40px;
+margin-top:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.title-main{
+font-family:'Playfair Display',serif;
+font-size:34px;
+}
+
+.nama-anak{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-top:10px;
+color:#2c3e50;
+}
+
+.section-title{
+font-family:'Playfair Display',serif;
+font-size:26px;
+}
+
+.countdown{
+font-size:22px;
+font-weight:bold;
+margin-top:10px;
+}
+
+iframe{
+border-radius:12px;
+border:0;
+}
+
+/* UCAPAN TAMU */
+
+.form-control{
+border-radius:10px;
+}
+
+.btn-kirim{
+background:#d4af37;
+border:none;
+padding:10px 25px;
+border-radius:25px;
+}
+
+.ucapan-box{
+margin-top:20px;
+text-align:left;
+}
+
+.ucapan-item{
+background:#f5f5f5;
+padding:12px;
+border-radius:10px;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- MUSIK -->
+<audio id="musik" loop>
+<source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<!-- COVER -->
+<div class="cover" id="cover">
+
+<div class="cover-card">
+
+<div class="save">Save The Date</div>
+
+<div class="title">TASYAKURAN KHITAN</div>
+
+<p>Senin, 23 Maret 2026</p>
+
+<div class="nama">Varend</div>
+
+<p class="mt-3">
+Kepada Yth.<br>
+Bapak / Ibu / Saudara / i
+</p>
+
+<button class="btn-open" onclick="bukaUndangan()">
+Buka Undangan
+</button>
+
+</div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content" id="content">
+
+<div class="container py-5 text-center">
+
+<!-- IDENTITAS -->
+<div class="section-card">
+
+<div class="title-main">Tasyakuran Khitan</div>
+
+<div class="nama-anak">
+Alvarendra Pranaja Aldric
+</div>
+
+<p class="mt-3">Putra dari</p>
+
+<h5>Bpk. Suwardjo</h5>
+
+<h5>&</h5>
+
+<h5>Ibu Eni Damayanti</h5>
+
+<p class="mt-4">
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+Bapak / Ibu / Saudara / i berkenan hadir untuk memberikan doa
+terbaik bagi anak kami.
+</p>
+
+</div>
+
+<!-- WAKTU -->
+<div class="section-card">
+
+<div class="section-title">Waktu Acara</div>
+
+<p class="mt-3">
+Senin, 23 Maret 2026
+</p>
+
+<p>
+Pukul 10.00 – 15.00 WIB
+</p>
+
+</div>
+
+<!-- LOKASI -->
+<div class="section-card">
+
+<div class="section-title">Lokasi</div>
+
+<p class="mt-3">
+Dukuh Karang Emas RT 03 RW 01 <br>
+Desa Sumub Kidul <br>
+Kec. Sragi, Kab. Pekalongan
+</p>
+
+<a href="https://goo.gl/maps/2TZAr5gXDiy4eoXb6" target="_blank">
+📍 Buka Lokasi di Google Maps
+</a>
+
+<div class="mt-3">
+
+<iframe
+src="https://maps.google.com/maps?q=Sumub%20Kidul%20Sragi%20Pekalongan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="300">
+</iframe>
+
+</div>
+
+</div>
+
+<!-- COUNTDOWN -->
+<div class="section-card">
+
+<div class="section-title">Countdown Acara</div>
+
+<div class="countdown" id="countdown"></div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+function bukaUndangan(){
+
+document.getElementById("cover").style.display="none";
+document.getElementById("content").style.display="block";
+
+document.getElementById("musik").play();
+
+}
+
+/* COUNTDOWN */
+
+var countDownDate = new Date("Mar 23, 2026 10:00:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = countDownDate - now;
+
+var days = Math.floor(distance/(1000*60*60*24));
+
+var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("countdown").innerHTML =
+days+" Hari "+hours+" Jam "+minutes+" Menit";
+
+},1000);
+
+/* UCAPAN TAMU */
+
+function kirimUcapan(){
+
+var nama=document.getElementById("namaTamu").value;
+var pesan=document.getElementById("pesanTamu").value;
+
+var box=document.getElementById("ucapanBox");
+
+box.innerHTML += "<div class='ucapan-item'><b>"+nama+"</b><br>"+pesan+"</div>";
+
+}
+
+</script>
+
+</body>
+</html>
